@@ -1,32 +1,30 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/login">Login</router-link>
+      <router-link to="/">Home</router-link>
     </nav>
-    <router-view />
+    showProcess-{{ showProcess }}
+    <component :is="layout">
+      <router-view />
+    </component>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { mapState } from "vuex";
+export default {
+  name: "App",
+  computed: {
+    ...mapState(["showProcess"]),
+    layout() {
+      const layoutName = this.$route.meta.layout || "default";
+      const title = this.$route.meta.title || this.$route.name;
+      this.$meta.setDocumentTitle(title);
+      return () => import(`@/layout/${layoutName}.vue`);
+    },
+  },
+};
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style lang="scss"></style>
