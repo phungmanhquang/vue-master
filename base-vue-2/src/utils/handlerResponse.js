@@ -18,5 +18,13 @@ export const handlerSuccess = (response) => {
 };
 
 export const handlerError = (error) => {
+  if (error.stats === 401) {
+    // thong bao loi "token het han"
+    // chuyen qua login
+
+    // ====
+    // refresh token con han  => goi refresh token tiep tuc
+    return;
+  }
   return handlerResponse(error.response, false);
 };

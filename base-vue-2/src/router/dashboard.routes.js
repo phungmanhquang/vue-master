@@ -1,6 +1,6 @@
 import { ROUTER_NAME, ROUTER_PATH } from "@/constants/routers";
 
-const DashboardLayoutRouter = [
+const DashboardRoutes = [
   {
     path: ROUTER_PATH.dashboard.home,
     name: ROUTER_NAME.dashboard.home,
@@ -12,4 +12,4 @@ const DashboardLayoutRouter = [
   },
 ];
 
-export default DashboardLayoutRouter;
+export default DashboardRoutes;

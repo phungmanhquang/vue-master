@@ -1,11 +1,14 @@
-import AuthLayoutRouter from "@/pages/auth/router";
-import DashboardLayoutRouter from "@/pages/dashboard/router";
 import Vue from "vue";
 import VueRouter from "vue-router";
+import AuthRoutes from "./auth.routes";
+import DashboardRoutes from "./dashboard.routes";
+import LearnVue2Routes from "@/router/learnVue2.routes";
 
 Vue.use(VueRouter);
 
-const routes = [...AuthLayoutRouter, ...DashboardLayoutRouter];
+const routes = [...AuthRoutes, ...DashboardRoutes, ...LearnVue2Routes];
+
+console.log("routes ", routes);
 
 const router = new VueRouter({
   mode: "history",

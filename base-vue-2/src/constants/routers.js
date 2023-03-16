@@ -5,6 +5,10 @@ export const ROUTER_PATH = {
   dashboard: {
     home: "/",
   },
+  learnVue2: {
+    root: "/learn-vue-2",
+    dynamicComponent: "/dynamic-component",
+  },
 };
 
 export const ROUTER_NAME = {
@@ -13,5 +17,9 @@ export const ROUTER_NAME = {
   },
   dashboard: {
     home: "home",
+  },
+  learnVue: {
+    root: "rootVue2",
+    dynamicComponent: "dynamicComponent",
   },
 };

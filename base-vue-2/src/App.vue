@@ -18,6 +18,7 @@ export default {
   computed: {
     ...mapState(["showProcess"]),
     layout() {
+      console.log("this.$route ", this.$route);
       const layoutName = this.$route.meta.layout || "default";
       const title = this.$route.meta.title || this.$route.name;
       this.$meta.setDocumentTitle(title);

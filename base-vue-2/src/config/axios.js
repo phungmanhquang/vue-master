@@ -10,6 +10,7 @@ const service = axios.create({
 });
 
 service.interceptors.request.use((config) => {
+  //  moi lan goi api chay qua interceptors request
   const token = getToken();
   if (token) config.headers.Authorization = "Bearer " + token;
 

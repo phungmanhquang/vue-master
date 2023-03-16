@@ -19,4 +19,7 @@ new Vue({
   router,
   store,
   render: (h) => h(App),
+  created() {
+    console.log("create app");
+  },
 }).$mount("#app");

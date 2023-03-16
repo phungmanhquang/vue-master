@@ -1,6 +1,6 @@
 import { ROUTER_NAME, ROUTER_PATH } from "@/constants/routers";
 
-const AuthLayoutRouter = [
+const AuthRoutes = [
   {
     path: ROUTER_PATH.auth.login,
     name: ROUTER_NAME.auth.login,
@@ -8,8 +8,9 @@ const AuthLayoutRouter = [
       import(/* webpackChunkName: "login" */ "@/pages/auth/login"),
     meta: {
       layout: "auth",
+      role: ["admin"],
     },
   },
 ];
 
-export default AuthLayoutRouter;
+export default AuthRoutes;
