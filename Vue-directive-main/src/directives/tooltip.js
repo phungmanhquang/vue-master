@@ -4,6 +4,7 @@ let bindValue = null;
 
 export default {
   bind(el, bind) {
+    console.log('run bind');
     bindValue = bind;
     el.addEventListener("mouseover", handlerMouseover);
     el.addEventListener("mouseout", handlerMouseout);

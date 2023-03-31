@@ -1,0 +1,11 @@
+// app global css in SCSS form
+
+.value-display {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  border: 0;
+}

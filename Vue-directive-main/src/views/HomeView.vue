@@ -93,9 +93,9 @@ export default {
   },
 
   mounted() {
-    setTimeout(() => {
-      this.tooltip1 = "changed";
-    }, 3000);
+    // setTimeout(() => {
+    //   this.tooltip1 = "changed";
+    // }, 3000);
   },
 };
 </script>

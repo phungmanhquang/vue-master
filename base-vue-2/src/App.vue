@@ -13,6 +13,8 @@
 
 <script>
 import { mapState } from "vuex";
+import * as zip from "https://deno.land/x/zipjs/index.js";
+
 export default {
   name: "App",
   computed: {

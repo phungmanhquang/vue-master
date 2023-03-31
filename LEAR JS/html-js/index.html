@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/gird.css" />
+  </head>
+  <body>
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/nuphar.jpg?w=9999&h=9999"
+      alt=""
+      loading="lazy"
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/looks.jpg?w=9999&h=9999"
+      alt=""
+      loading="lazy"
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/harris.jpg?w=9999&h=9999"
+      alt=""
+      loading="lazy"
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/trainer-grey.jpg?w=9999&h=9999"
+      alt=""
+      loading="lazy"
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/lacoste.jpg?w=9999&h=9999"
+      alt=""
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/birdbath.jpg?w=9999&h=9999"
+      alt=""
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/deer.jpg?w=9999&h=9999"
+      alt=""
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/lady.jpg?w=9999&h=9999"
+      alt=""
+    />
+    <img
+      height="500"
+      data-src="https://demo.sirv.com/swing.jpg?w=9999&h=9999"
+      alt=""
+    />
+
+    <button id="btn_save_data">Save data</button>
+    <section class="container">
+      <div class="item item-a">item-a</div>
+      <div class="item item-b">item-b</div>
+      <div class="item item-c">item-c</div>
+      <div class="item item-d">item-d</div>
+      <div class="item item-e">item-e</div>
+    </section>
+    <script src="./script/ArrowFunction.js"></script>
+    <script src="./script/Storage.js"></script>
+
+    <p>Click DIV1 Element</p>
+    <div onclick="secondFunc()">
+      DIV 2
+      <div onclick="firstFunc(event)">DIV 1</div>
+    </div>
+
+    <script>
+      function firstFunc(event) {
+        alert("DIV 1");
+        // event.stopPropagation();
+      }
+
+      function secondFunc() {
+        alert("DIV 2");
+      }
+    </script>
+
+    <script>
+     const images = document.querySelectorAll("img");
+      images.forEach((img) => {
+        img.src = img.dataset.src;
+      });
+    </script>
+  </body>
+</html>
